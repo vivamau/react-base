@@ -1,5 +1,5 @@
-import Homepage from "../views/Homepage/Homepage";
-import Page1 from "../views/Page1/Page1";
+import Homepage from "views/Homepage/Homepage";
+import Page1 from "views/Page1/Page1";
 
 
 const siteRoutes = [

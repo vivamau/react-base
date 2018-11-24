@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 import { HashRouter, Route, Switch } from "react-router-dom";
 
-import indexRoutes from "./routes/index.jsx";
+import indexRoutes from "routes/index.jsx";
 
-import "./assets/sass/base.css";
+import "assets/sass/base.css";
 
 ReactDOM.render(
     <HashRouter>

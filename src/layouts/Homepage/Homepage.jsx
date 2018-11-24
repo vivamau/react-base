@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import siteRoutes from "../../routes/site.jsx";
+import siteRoutes from "routes/site.jsx";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 class Homepage extends Component {
