@@ -51,7 +51,7 @@ class Page2 extends Component {
                 <form onSubmit={this.getParameters}>
                     <button>Submit</button>
                 </form>
-                {this.state.loading ? "You POST has been sent, please wait for a response..." : ""}           
+                {this.state.loading ? "Your POST has been sent, please wait for a response..." : ""}           
                 {this.state.loaded ? "Load complete. Check the console log." : ""}         
             </div>
         )
