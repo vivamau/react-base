@@ -22,6 +22,7 @@ class Page1 extends Component {
             <div>
                 <h1>Page1</h1>
                 ID Parameters passed is test: {this.getParameters().id}
+                Library used is <a href="">query-string</a>
             </div>
         )
     }
