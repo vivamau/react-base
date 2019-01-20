@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {SAMPLEBODY} from "../../config/config"
 class Page2 extends Component {
     state = {
         loading: false,
@@ -10,18 +11,10 @@ class Page2 extends Component {
     
     getParameters = () => {
         this.setState({ loading: true });
-        console.log(11111111,this.state.ResponseBack)
         const headers = {
             'Content-Type': 'application/json; charset=utf-8'
         }
-        const body = {
-            "grant_type":"password",
-            "client_id":"sugar",
-            "client_secret":"",
-            "username": "admin",
-            "password": "admin",
-            "platform":"base"
-        }
+        const body = SAMPLEBODY
         axios.post('/sugar/rest/v11/oauth2/token', body,{headers: headers} )
         .then((response) => {
             console.log(response)
