@@ -18,6 +18,7 @@ render() {
             <ul>
                 <li>Example for <a href="#/page1?id=42384923">Routing and query string management</a></li>
                 <li>Example for <a href="#/page2">a POST call using Axios</a></li>
+                <li>Example for <a href="#/page3">a GET call using Axios</a></li>
             </ul>
             
         </div>

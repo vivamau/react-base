@@ -1,22 +1,37 @@
 import React, { Component } from "react";
 import siteRoutes from "routes/site.jsx";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { PrivateRoute } from "../../routes/PrivateRoute";
 
 class Homepage extends Component {
-
-    render() {
-        return (
-            <Switch>
-            {siteRoutes.map((prop, key) => {
-            if (prop.redirect)
-                return <Redirect from={prop.path} to={prop.to} key={key} />;
+  render() {
+    return (
+      <BrowserRouter>
+        <Switch>
+          {siteRoutes.map((prop, key) => {
+            if (prop.private)
+              return (
+                <PrivateRoute
+                  exact
+                  path={prop.path}
+                  component={prop.component}
+                  title={prop.name}
+                  key={prop.path}
+                />
+              );
             return (
-                <Route path={prop.path} component={prop.component} key={key} />
+              <Route
+                path={prop.path}
+                component={prop.component}
+                title={prop.name}
+                key={prop.path}
+              />
             );
-            })}
-            </Switch>
-        )
-    }
+          })}
+        </Switch>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default Homepage;
